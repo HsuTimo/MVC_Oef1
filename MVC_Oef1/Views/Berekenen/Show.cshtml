@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Show";
+
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Welcome to the show page.</p>
+<p>Year data: @ViewBag.Year</p>
+<p>@ViewBag.Hello</p>
+@for (int i = 1; i <= ViewBag.Aantal; i++)
+{
+    <h2>@i</h2>
+}
+<p>De datum van gisteren @ViewData["Datum"]</p>
+@foreach (var item in ViewData["List"] as List<int>)
+{
+    <p>@item</p>
+}
